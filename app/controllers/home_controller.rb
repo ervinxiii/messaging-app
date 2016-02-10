@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
-    render text: 'Hello!'
+  end
+
+  def dashboard
+    render layout: 'dashboard'
   end
 end

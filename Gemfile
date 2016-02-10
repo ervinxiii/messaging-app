@@ -51,3 +51,4 @@ end
 gem 'ember-rails'
 gem 'ember-source', '~> 1.9.0'
 gem 'devise'
+gem 'bootstrap-sass', '~> 3.3.6'

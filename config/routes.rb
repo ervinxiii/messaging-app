@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'home#index'
+  unauthenticated :user do
+    root to: 'home#index'
+  end
+
+  authenticate :user do
+    root to: 'home#dashboard', as: :dashboard_root
+  end
 
   namespace :api do
     resources :users
