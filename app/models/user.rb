@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
    has_many :participations
    has_many :groups, through: :participations
+
+   has_many :sended_messages, foreign_key: :sender_id, class_name: 'Message'
+   has_many :received_messages, foreign_key: :recipient_id, class_name: 'Message'
 end
