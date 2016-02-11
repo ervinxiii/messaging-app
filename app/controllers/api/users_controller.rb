@@ -1,5 +1,4 @@
-class UseController < ApplicationController
-  before_action :authenticate_user!
+class Api::UsersController < ApiController
 
   def index
     render json: User.all

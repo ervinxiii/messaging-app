@@ -46,6 +46,7 @@ group :development do
 
   gem 'thin'
   gem 'quiet_assets'
+  gem "letter_opener"
 end
 
 gem 'ember-rails'
