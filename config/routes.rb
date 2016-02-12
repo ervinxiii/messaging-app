@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
-    resources :users
+    resources :users, :messages, :dashboard
   end
 end

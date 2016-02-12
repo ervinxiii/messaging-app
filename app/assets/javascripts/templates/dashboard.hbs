@@ -1,0 +1,10 @@
+<h2>Users</h2>
+<ul>
+  {{#each users as |user|}}
+  <!--<li action 'selectUser' user}}>{{#link-to 'dashboard.users'}}{{user.email}}{{/link-to}}</li>-->
+  <li {{action 'selectUser' user}}>{{user.email}}</li>
+  {{/each}}
+</ul>
+<div>
+  {{outlet}}
+</div>
