@@ -1,7 +1,6 @@
 class Api::UsersController < ApiController
-
   def index
-    render json: User.all
+    render json: User.where('id NOT IN (:ids)', ids: current_user.id)
   end
 
   def show

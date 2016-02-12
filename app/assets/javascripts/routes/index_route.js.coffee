@@ -1,6 +1,6 @@
 MessagingApp.IndexRoute = Em.Route.extend
   model: ->
-    #@store.findAll 'user'
+    @store.findAll 'user'
 
   setupController: (controller, model) ->
-    #controller.set 'user', model
+    controller.set 'users', model
