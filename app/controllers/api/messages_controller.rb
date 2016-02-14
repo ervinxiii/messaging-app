@@ -5,6 +5,7 @@ class Api::MessagesController < ApiController
 
   def create
     message = Message.new message_params
+    message.recipient_id = params[:message][:user]
 
     if message.save
       render json: message, status: 200
