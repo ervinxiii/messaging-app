@@ -3,15 +3,11 @@
 <h3>Private Message</h3>
 <ul>
   {{#each users as |user|}}
-   <!-- <li {{action 'selectUser' user}}>{{#link-to "dashboard.users"}}{{user.email}}{{/link-to}}</li>-->
-   <li {{action 'selectUser' user}}>{{user.email}}</li>
+   <li>{{#link-to "dashboard.users" user}}{{user.email}}{{/link-to}}</li>
   {{/each}}
 </ul>
-<div>
-  {{textarea value=message.content}}
-</div>
 <br/>
-<button type='submit' {{action 'createNewMessage' message}}>Submit</button>
+
 <div>
   {{outlet}}
 </div>

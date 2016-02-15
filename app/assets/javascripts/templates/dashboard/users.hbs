@@ -1,6 +1,13 @@
-<h1>Hello</h1>
+<h4>Messages</h4>
+<ul>
+  {{#each messages as |message|}}
+  <li>{{message.content}}</li>
+  {{/each}}
+</ul>
+
+<h3>New Message:</h3>
 <div>
   {{textarea value=message.content}}
 </div>
 <br/>
-<button type='submit' {{action 'createNewMessage' user}}>Submit</button>
+<button type='submit' {{action 'createNewMessage'}}>Submit</button>

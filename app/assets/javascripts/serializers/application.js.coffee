@@ -10,3 +10,9 @@ MessagingApp.ApplicationSerializer = DS.RESTSerializer.extend
         json[prop] = hash[prop]
 
     this._super(type, json, property)
+
+  #serializeBelongsTo: (record, json, relationship) ->
+    #key = relationship.key
+    #belongsTo = Em.get(record, key)
+   ##key = this.keyForRelationship ? this.keyForRelationship(key, "belongsTo") : key
+    #key = if @keyForRelationship then @keyForRelationship(key, 'belongsTo') else key
